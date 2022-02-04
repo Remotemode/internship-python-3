@@ -19,8 +19,6 @@ while check_0:
         else:
             print("Entered number of balls is not supported.")
 
-
-
 for i in inputs:
     clocks = Clocks(i)
     result_cycles = clocks.simulate()

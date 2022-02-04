@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class Clocks:
     def __init__(self, numBalls):
         self.line_1  = []
@@ -33,11 +34,6 @@ class Clocks:
                 return False
         return True
 
-    def cycles_to_time(cycles):
-        days = int(cycles / 2)
-        is_half_day = cycles % 2 != 0
-        return str(days) + " days " + ("and 12 hours" if is_half_day else "")
-
     def simulate(self):
         inProgress = True
         while inProgress:
@@ -45,3 +41,9 @@ class Clocks:
                 if self.check_balls_sequence():
                     inProgress = False
         return self.fullCycles
+
+    def cycles_to_time(cycles):
+        days = int(cycles / 2)
+        is_half_day = cycles % 2 != 0
+        return str(days) + " days " + ("and 12 hours" if is_half_day else "")
+
