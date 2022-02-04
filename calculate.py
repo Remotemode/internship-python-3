@@ -26,3 +26,14 @@ class Clocks:
                     self.fullCycles += 1
                     return True
         return False
+
+    def check_balls_sequence(self):
+        for i in range(len(self.balls)):
+            if self.balls[i] != i:
+                return False
+        return True
+
+    def cycles_to_time(cycles):
+        days = int(cycles / 2)
+        is_half_day = cycles % 2 != 0
+        return str(days) + " days " + ("and 12 hours" if is_half_day else "")
