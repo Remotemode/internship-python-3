@@ -23,7 +23,7 @@ for i in inputs:
     clocks = Clocks(i)
     result_cycles = clocks.simulate()
     print("With number of balls: ", i)
-    print("Cycles to revert in previous state: ", Clocks.cycles_to_time(result_cycles))
+    print("To revert in previous state: ", result_cycles)
     print("-------------------------------------")
 
 

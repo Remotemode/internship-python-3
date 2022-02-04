@@ -40,8 +40,9 @@ class Clocks:
             if self.tick():
                 if self.check_balls_sequence():
                     inProgress = False
-        return self.fullCycles
+        return Clocks.cycles_to_time(self.fullCycles)
 
+    @staticmethod
     def cycles_to_time(cycles):
         days = int(cycles / 2)
         is_half_day = cycles % 2 != 0
